@@ -1,12 +1,11 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'blog'; // required: replace example with your forum shortname
+    var disqus_shortname = 'jonathanspeekblog';
     var disqus_identifier = '<%= @post.id %>';
     var disqus_title = '<%= @post.title %>';
     var disqus_url = '<%= url_for([@post, {only_path: false}]) %>';
-
-
+    
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
