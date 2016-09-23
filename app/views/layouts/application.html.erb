@@ -24,11 +24,11 @@
 	<header id="main_navigation" class="clearfix">
 		<%= link_to "Jonathan Speek", root_path, class: "name" %>
 		<nav>
-			<%= link_to "Articles", posts_path %>
-			<%= link_to "Projects", projects_path %>
-			<%= link_to "Contact", new_contact_path %>
+			<%= link_to 'Posts', posts_path %>
+			<%= link_to 'Projects', projects_path %>
+			<%= link_to 'Contact', new_contact_path %>
 			<% if user_signed_in? %>
-				<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+				<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
 			<% end %>
 		</nav>
 	</header>
