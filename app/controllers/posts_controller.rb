@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
-		@posts = Post.all.order("created_at desc").paginate(page: params[:page], per_page: 5)
+		@posts = Post.all.order('created_at desc').paginate(page: params[:page], per_page: 5)
 	end
 
 	def new
@@ -14,9 +14,9 @@ class PostsController < ApplicationController
 		@post = Post.new post_params
 
 		if @post.save
-			redirect_to @post, notice: "Hellz yeah, Jonathan! Your article was successfully saved!"
+			redirect_to @post, notice: 'Hellz yeah, Jonathan! Your article was successfully saved!'
 		else
-			render 'new', notice: "Oh no, Jonathan! I was unable to save your post."
+			render 'new', notice: 'Oh no, Jonathan! I was unable to save your post.'
 		end
 	end
 
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 
 	def update
 		if @post.update post_params
-			redirect_to @post, notice: "Huzzah! Your article was successfully saved!"
+			redirect_to @post, notice: 'Huzzah! Your article was successfully saved!'
 		else
 			render 'edit'
 		end
