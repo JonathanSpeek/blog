@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+ruby '2.3.1'
 
 gem 'puma'
 gem 'rails', '4.2.0'
@@ -33,4 +33,3 @@ group :production do
 	gem 'pg'
 	gem 'rails_12factor'
 end
-

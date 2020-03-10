@@ -1,27 +1,25 @@
-<div class="wrapper wrapper_padding clearfix">
-	<div class="col-2 homepage_content">
-		<h2>Stuff I've Written</h2>
-		<hr>
-		<% @posts.each do |post| %>
-			<h3><a href="#"><%= link_to post.title, post %></a></h3>
-			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
-		<% end %>
+<div class="row">
+	<div class="space-75">
+		<h1>
+			I'm a designer & developer from Colorado, currently doing Product Design at
+			<a target="_blank" href="https://www.cognizant.com/accelerator">Cognizant Accelerator</a>.
+		</h1>
 	</div>
-	<div class="col-3 homepage_content">
-		<h2>Stuff I've Built</h2>
-		<hr>
+</div>
+
+<div class="row">
+	<div class="space-4">
+		<h3 class="bold">things i've built:</h3>
 		<% @projects.each do |project| %>
-			<h3><a href="#"><%= link_to project.title, project %></a></h3>
+			<a href="#"><%= link_to project.title, project %></a>
 			<p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
 		<% end %>
 	</div>
-	<div class="col-1 about homepage_content">
-	<div align="center">
-	<img style="height: 250px; border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/11696256?v=3&s=460"/>
-		</div>
-		<hr>
-		<p>I'm a developer, designer, &amp; classical musician living in Colorado.</p>
-		<p>You can find me speaking in 140 characters on <a href="http://twitter.com/jonspeek" target="_blank">Twitter</a>, updating you on my latest projects here, and sharing some code on <a href="http://github.com/jonathanspeek" target="_blank">Github</a>.</p>
-    <p>Feel free to <a href="mailto:jonspeek@gmail.com">contact me</a> regarding any projects or ideas, I'd love to chat or grab coffee. Mmmmmm coffee...</p>
+	<div class="space-4">
+		<h3 class="bold">stuff i've written:</h3>
+		<% @posts.each do |post| %>
+			<a href="#"><%= link_to post.title, post %></a>
+			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+		<% end %>
 	</div>
 </div>

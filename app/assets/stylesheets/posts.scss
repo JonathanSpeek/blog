@@ -1,0 +1,17 @@
+@import 'colors';
+
+body.posts {
+  color: $black;
+  background-color: $white;
+  a {
+    border-bottom: 2px solid $black;
+    &:hover {
+      background: $black;
+      color: $white;
+    }
+  }
+}
+
+.post-index {
+  text-align: center;
+}

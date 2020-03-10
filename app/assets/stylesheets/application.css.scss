@@ -1,199 +1,92 @@
 @import 'normalize';
-
-$dark: #424652;
-$white: #FFFFFF;
-$light: #9a9da4;
-$highlight: #353866;
-$border: #E9E9E9;
+@import 'spacegrid.min';
+@import 'colors';
+@import 'posts';
+@import 'projects';
+@import 'contact';
+@import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display:900');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
 
 * {
 	box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 body {
-	font-family: 'Raleway', sans-serif;
-}
-
-.wrapper {
-	width: 90%;
-	margin: 0 auto;
-}
-
-.skinny_wrapper {
-	width: 80%;
-	max-width: 760px;
-	margin: 0 auto;
-}
-
-.wrapper_padding {
-	padding: 4rem 0;
-}
-
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
-
-.hidden {
-	display: none;
-}
-
-.notice, .alert {
-  text-align: center;
-  padding: 1em 0;
-  border-bottom: 1px solid #E9E9E9;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul, li {
-	color: $dark;
-}
-
-h1 {
-	font-size: 2.5rem;
-}
-
-h2 {
-	font-size: 2rem;
-}
-
-h3 {
-	font-size: 1.75rem;
-}
-
-h4 {
-	font-size: 1.375rem;
-}
-
-h5 {
-	font-size: 1.25rem;
-}
-
-h6 {
-	font-size: 1rem;
-}
-
-p, li {
-	font-size: 1.1rem;
-	line-height: 1.75;
-}
-
-p, ul, ol {
-	margin: 0 0 1.6em 0;
-}
-
-hr {
-	width: 3em;
-	display: block;
-	height: 2px;
-	border: 0;
-	border-top: 2px solid $highlight;
-	margin: 2rem 0;
-}
-
-a {
-  color: $highlight;
-}
-
-#main_navigation {
-	padding: 2.5em 5%;
-	border-bottom: 1px solid $border;
-	.name {
-		font-weight: 700;
-		font-size: .8em;
-		letter-spacing: 4px;
-		text-transform: uppercase;
-		border: 2px solid $border;
-		padding: 1rem;
-		text-decoration: none;
-		color: $dark;
-		float: left;
-	}
-	nav {
-		float: right;
-		padding-top: 1.5rem;
+  margin: 0 3em;
+  font-family: 'Space Mono', monospace;
+	&.welcome {
+		background-color: $mint;
+		color: $indigo;
 		a {
-			color: $dark;
-			text-decoration: none;
-			margin: 0 1rem;
-			font-size: 1rem;
-		}
-	}
-}
-
-#page_title {
-	text-align: center;
-	border-bottom: 1px solid $border;
-	padding: 3em 0;
-	font-size: 1rem;
-	text-transform: uppercase;
-}
-
-#main_footer {
-	padding: 2.5em 5%;
-	border-top: 1px solid $border;
-	.copyright {
-		float: left;
-		font-size: .9em;
-		margin: 0;
-	}
-	nav {
-		float: right;
-		i {
-			color: $dark;
-			margin-left: 1em;
-			padding-top: .2em;
+			border-bottom: 2px solid $indigo;
 			&:hover {
-				color: $highlight;
+				background: $indigo;
+			  color: $mint;
 			}
 		}
 	}
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea {
-	width: 100%;
-	max-width: 100%;
-	height: 3em;
-	border: 2px solid $border;
-	padding: 1em;
-	margin: .5em 0 2em 0;
+h1 {
+  font-size: 3.6em;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.4;
 }
 
-textarea {
-	min-height: 20em;
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.1s cubic-bezier(.33,.66,.66,1);
 }
 
-input[type="submit"], .button {
-	outline: none;
-	background: transparent;
-	border: 2px solid $border;
-	text-align: center;
-	font-size: 1em;
-	color: $dark;
-	text-decoration: none;
-	padding: 1em 2em;
-	&:hover {
-		border: 2px solid $highlight;
-		color: $highlight;
-	}
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-.project_button {
-	background: $highlight;
-	color: $white;
-	text-decoration: none;
-	padding: 1em 2em;
+.nav p {
+  float: left;
 }
 
-.button_wrapper {
-	margin: 4em 0 0 0;
-	text-align: center;
+.nav ul {
+  text-align: right;
+  margin-left: -1.388889%;
+  margin-right: -1.388889%;
 }
 
-@import 'welcome';
-@import 'posts_projects';
+.nav li {
+  display: inline-block;
+  padding-left: 1.388889%;
+  padding-right: 1.388889%;
+}
+
+.bold {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.non-nav {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 580px) {
+  body {
+    margin: 0 0.25em;
+  }
+
+  .nav li {
+  display: block;
+  }
+
+  .space-75 {
+    min-width: 100%;
+  }
+}
+
 @import 'pygments';
